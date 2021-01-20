@@ -29,6 +29,7 @@ github_username:  jamogriff
 
 # Build settings
 theme: jekyll-theme-hydeout
+remote_theme: fongandrew/hydeout
 plugins:
   - jekyll-feed
 
