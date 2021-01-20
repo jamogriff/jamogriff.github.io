@@ -11,7 +11,7 @@
 
   <title>
     
-      About &middot; An Inquiring Mind
+      An Inquiring Mind
     
   </title>
 
@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="page">
+  <body class="search">
 
     <div id="sidebar">
   <header>
@@ -213,22 +213,25 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title">About</h1>
+  <h1 class="page-title"><label for="search-bar">Home</label></h1>
 </header>
 <div class="content">
-  <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+  <form action="https://google.com/search" class="search-form">
+  <div class="search-row">
+    <input id="search-bar" type="search" name="q" />
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+    
+    
+    
+    
+    
+    <input name="sitesearch" type="hidden"
+           value="localhost:4000" />
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
-
-
+    <input type="submit" value="Search" />
+  </div>
+</form>
 </div>
-
     </main>
 
     <!-- Optional footer content -->

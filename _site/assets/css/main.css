@@ -18,7 +18,7 @@ html {
   line-height: 1.5; }
   @media (min-width: 49rem) {
     html {
-      font-size: 1.25rem; } }
+      font-size: 1.2rem; } }
 
 body {
   -webkit-text-size-adjust: 100%;
@@ -487,8 +487,8 @@ pre {
 */
 body {
   color: rgba(255, 255, 255, 0.75);
-  background-color: #202020;
-  background-image: linear-gradient(to bottom, #323232, #0e0e0e);
+  background-color: #0E0E52;
+  background-image: linear-gradient(to bottom, #131370, #090934);
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -500,7 +500,7 @@ body {
   #sidebar .site-title {
     font-family: "Abril Fatface", serif;
     font-weight: normal;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.75);
     margin-top: 0;
     margin-bottom: 0.5rem; }
