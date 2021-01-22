@@ -27,7 +27,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jamogriff
 
 # Build settings
-#theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
+# theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
 remote_theme: fongandrew/hydeout # line added so GitHub Pages adds theme correctly
 plugins:
   - jekyll-feed

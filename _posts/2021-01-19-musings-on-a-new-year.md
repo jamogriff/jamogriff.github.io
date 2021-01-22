@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Jamison
+category: music
 ---
 
 # Bananas!

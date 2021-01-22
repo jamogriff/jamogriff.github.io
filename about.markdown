@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+sidebar-link: true
 permalink: /about/
 ---
 
@@ -10,7 +11,7 @@ Perhaps the most illuminating details lie in early childhood. Before the age of 
 
 Then I watched *Star Wars: A New Hope* for the first time and when the credits rolled I cried. This was likely because my mom said there was a second film that we didn't have and I couldn't wait to
 
-I got really into Calvin and Hobbes books and would bring them on camping trips. something electronic apart-- remote controls, toys, computers. 
+I got really into Calvin and Hobbes books and would bring them on camping trips. something electronic apart-- remote controls, toys, computers.
 
 ### Fast forward through a couple of heart-warming, enriching, and slightly awkward decades later...
 
