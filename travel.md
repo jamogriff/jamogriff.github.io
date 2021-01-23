@@ -1,7 +1,7 @@
 ---
 layout: category
-title: Travelogue
-category: travelogue
+title: Travel
+category: travel
 ---
 
 # Well hello there
