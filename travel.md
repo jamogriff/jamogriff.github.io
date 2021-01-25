@@ -4,6 +4,6 @@ title: Travel
 category: travel
 ---
 
-# Well hello there
+![Flying above the Midwest]({{ base.url }}/assets/images/travel.jpg "Flying above the Midwest")
 
-All of the places I've been...
+I love to travel. Whether it's in a new city or the wilderness, travel always broadens my perspective. The following posts are musings of past travels accompanied by my photography.

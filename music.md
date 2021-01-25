@@ -4,6 +4,5 @@ title: Music
 category: music
 ---
 
-# "Remember to always keep a song in your heart"
-![A Young Michael Jackson watching Stevie Wonder]({{ base.url }}/assets/images/mjandstevie.jpg "A Young Michael Jackson watching Stevie Wonder")
-Music has always been a big part of my life. Check out my thoughts and more pertaining to the subject here.
+![Guitar Sculpture at MoPOP Seattle]({{ base.url }}/assets/images/music.jpg "Guitar Sculpture at MoPOP Seattle")
+Playing and listening to music has always been a big part of my life. My recordings, thoughts and recommendations can be found below.
