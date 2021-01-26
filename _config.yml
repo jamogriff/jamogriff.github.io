@@ -21,7 +21,7 @@
 title: An Inquiring Mind
 email: jamo@jgriffith.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Where photography, programming, music and musings collide— and recipes for good measure!
+  Where photography, programming, music and musings collide.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jamogriff

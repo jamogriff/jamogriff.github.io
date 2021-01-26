@@ -4,6 +4,7 @@ title: "Tourists in France"
 category: travel
 ---
 
+![Tourists Crowding the Mona Lisa]({{ base.url }}/assets/images/travel/tourists.jpg)
 <h1 style='font-family: "Abril Fatface", serif;'>There's a misconception that the French are rude...</h1>
 
 __... but if I were French I don't think I could stand the tourists.__

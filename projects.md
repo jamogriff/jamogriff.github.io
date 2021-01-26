@@ -4,6 +4,5 @@ title: Projects
 category: projects
 ---
 
-# "Eastbound and down, load 'em up and truck 'em.""
-![](img src="./assets/images/steveandbill.jpg")
+![Conscious Code]({{ base.url }}/assets/images/conscious-code.jpg)
 Currently enrolled in Turing's BE program! 🤤
