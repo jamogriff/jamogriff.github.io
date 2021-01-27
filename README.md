@@ -1,11 +1,7 @@
-# jamogriff.github.io
+# Personal Website Project
 
-<b>Personal Website Project</b>
-<p>This is the beginning of trying out a couple new technologies, principally:
-<ul>
-  <li>Hosting a page using GitHub Pages</li>
-  <li>Utilizing Jekyll for webpage formatting</li>
-  <li>Dabbling in Javascript</li>
-</ul>
+This project utilized Jekyll to generate a static site to use for my own purposes. This served as a great introduction to trying out a couple new technologies, specifically:
+- Hosting a page using GitHub Pages
+- Utilizing Jekyll for site generation
 
-</p>
+### I'll return to document further on this project and my thoughts on Jekyll in general-- in short, it's awesome.
