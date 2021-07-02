@@ -1,1 +1,13 @@
+# Mac specific
 .DS_Store
+
+# Vim specific
+*.swo
+*.swp
+
+# Hidden dirs
+.rspec
+.ruby-version
+
+# tmp
+/tmp
