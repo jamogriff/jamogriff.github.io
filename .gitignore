@@ -5,9 +5,5 @@
 *.swo
 *.swp
 
-# Hidden dirs
-.rspec
-.ruby-version
-
 # tmp
 /tmp
