@@ -1,4 +1,4 @@
-RSpec.describe 'Index page', type: feature do
+RSpec.describe 'Index page', type: :feature do
 
   it 'has links for all site pages' do
     visit "/"

@@ -1,4 +1,4 @@
-RSpec.describe 'About Me section', type: feature do
+RSpec.describe 'About Me section', type: :feature do
 
   it 'has image of myself' do
     visit "/about"
