@@ -4,7 +4,6 @@ rbenv:
 
 script: 
   - bundle install
-  - bundle exec jekyll serve
   - bundle exec rspec
 
 cache: bundler
