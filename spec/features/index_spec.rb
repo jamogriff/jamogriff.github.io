@@ -3,36 +3,23 @@ RSpec.describe 'Index page', type: :feature do
   it 'has links for all site pages' do
     visit "/"
 
-    expect(page).to have_link "Travel"
-    expect(page).to have_link "About"
-    expect(page).to have_link "Music"
-    expect(page).to have_link "Projects"
+    expect(page).to have_link "Blog"
+    expect(page).to have_link "Worklog"
   end
 
-  it 'links to about page' do
-    visit "/"
-    click_link "About"
-    expect(current_path).to eq "/about/"
-  end
-
-  it 'links to travel page' do
+  it 'links to blog page' do
     visit "/"
     within "nav#sidebar-nav-links" do
-      click_link "Travel"
+      click_link "Blog"
     end
-    expect(current_path).to eq "/travel/"
+    expect(current_path).to eq "/blog"
   end
 
-  it 'links to music page' do
+  it 'links to worklog page' do
     visit "/"
     within "nav#sidebar-nav-links" do
-      click_link "Music"
+      click_link "worklog"
     end
-    expect(current_path).to eq "/music/"
-  end
-  it 'links to projects page' do
-    visit "/"
-    click_link "Projects"
-    expect(current_path).to eq "/projects/"
+    expect(current_path).to eq "/worklog"
   end
 end

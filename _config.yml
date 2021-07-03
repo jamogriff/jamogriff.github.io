@@ -18,17 +18,21 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: An Inquiring Mind
+title: Jamison Codes
 email: jamo@jgriffith.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Where photography, programming, music and musings collide.
+  because it's awesome
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jamogriff
 
 # Build settings
-# theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
+# Development Theme
+#theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
+
+# Production theme
 remote_theme: fongandrew/hydeout # line added so GitHub Pages adds theme correctly
+
 plugins:
   - jekyll-feed
 
@@ -40,14 +44,15 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+   - spec/
+   - tmp/
+   - scripts/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/

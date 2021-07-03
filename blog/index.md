@@ -1,8 +1,8 @@
 ---
 layout: category
-title: Travel
-category: travel
-permalink: /travel/
+title: Blog
+category: leisure
+permalink: /blog
 ---
 
 ![Grand Tetons in the Mirror]({{ base.url }}/assets/images/travel/teton-mirror.jpg "Grand Tetons in the Mirror")
