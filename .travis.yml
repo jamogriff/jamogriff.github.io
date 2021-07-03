@@ -1,4 +1,9 @@
 language: ruby
+rbenv:
+  - 2.7.2
+
 script: 
   - bundle install
   - bundle exec rspec
+
+cache: bundler
