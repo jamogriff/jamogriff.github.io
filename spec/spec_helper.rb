@@ -26,7 +26,7 @@ RSpec.configure do |config|
 
   Capybara.register_driver :selenium do |app|
     # configure Selenium to use Chrome
-    Capybara::Selenium::Driver.new(app, browser: :chrome)
+    Capybara::Selenium::Driver.new(app, :browser => :chrome)
   end
 
   # configure Capybara to load website through rack-jekyll.
