@@ -2,7 +2,7 @@
 layout: page
 title: Jamo API Docs
 permalink: /api-docs
-sidebar_link: true
+sidebar_link: false
 ---
 
 ## Please excuse the mess... 

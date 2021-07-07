@@ -28,10 +28,10 @@ github_username:  jamogriff
 
 # Build settings
 # Development Theme
-theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
+#theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
 
 # Production theme
-#remote_theme: fongandrew/hydeout # line added so GitHub Pages adds theme correctly
+remote_theme: fongandrew/hydeout # line added so GitHub Pages adds theme correctly
 
 plugins:
   - jekyll-feed
