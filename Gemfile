@@ -13,9 +13,8 @@ end
 
 group :development, :test do
   gem "kramdown-parser-gfm" # added due to local build error
-  # Gem crashes on M1 chip architecture; but preferable to RSpec
-  # Check status of issue here: https://github.com/gjtorikian/html-proofer/issues/646
-  #gem "html-proofer"
+  gem "rake"
+  gem "html-proofer"
   gem "rspec"
   gem "capybara"
   gem "selenium-webdriver"

@@ -1,0 +1,18 @@
+// Personal branding
+$primary-color: #0E0E52;
+$secondary-color: #edcb96;
+$neutral-color: #F2433;
+$accent-color: #FFB8D1;
+
+
+$font-path: "../branding/fonts";
+
+@font-face {
+font-family: "plex-mono";
+src: url("#{$font-path}/PlexMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+font-family: "plex-sans";
+src: url("#{$font-path}/PlexSans.ttf") format("truetype");
+}

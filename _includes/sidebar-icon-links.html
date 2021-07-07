@@ -1,0 +1,28 @@
+<nav id="sidebar-icon-links">
+  
+  <a id="github"
+     class="icon" title="GitHub"
+     href="https://github.com/jamogriff">
+	  {% include social/github.svg width=40 %}
+
+  </a>
+  <a id="twitter"
+     class="icon" title="Twitter"
+     href="https://twitter.com/jamogriff">
+	  {% include social/twitter.svg %}
+
+  </a>
+  <a id="linkedin"
+     class="icon" title="LinkedIn"
+     href="https://linkedin.com/jamison-griffith">
+	  {% include social/linkedin.svg %}
+
+  </a>
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="{{ site.baseurl }}/{{ site.feed.path | default: 'feed.xml' }}">
+    {% include svg/feed.svg %}
+  </a>
+
+</nav>

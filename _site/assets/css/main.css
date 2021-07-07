@@ -1,5 +1,8 @@
-/* Most of these imports are derived from https://github.com/poole/poole. Designed, built, and released under MIT license by @mdo.
+/* NOTE: This file was added in case default CSS needs to be overridden, in which case, create associated scss file in hydeout directory.
+ Most of these imports are derived from https://github.com/poole/poole. Designed, built, and released under MIT license by @mdo.
 */
+@font-face { font-family: "plex-mono"; src: url("../branding/fonts/PlexMono-Bold.ttf") format("truetype"); }
+@font-face { font-family: "plex-sans"; src: url("../branding/fonts/PlexSans.ttf") format("truetype"); }
 * { box-sizing: border-box; }
 
 html, body { margin: 0; padding: 0; }
@@ -36,44 +39,44 @@ button:hover, input[type='submit']:hover { background: #0E0E52; border-color: #0
 
 .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-h1, h2, h3, h4, h5, h6, .site-title { color: #313131; font-weight: 600; line-height: 1.25; margin-bottom: 0.5rem; text-rendering: optimizeLegibility; }
+h1, h2, h3, h4, h5, h6 { font-family: "plex-mono", serif; margin-bottom: 0.5rem; font-weight: 600; line-height: 1.25; color: #313131; text-rendering: optimizeLegibility; }
 
 h1 { font-size: 2rem; }
 
-h2 { font-size: 1.5rem; margin-top: 1rem; }
+h2 { margin-top: 1rem; font-size: 1.5rem; }
 
-h3 { font-size: 1.25rem; margin-top: 1.5rem; }
+h3 { margin-top: 1.5rem; font-size: 1.25rem; }
 
-h4, h5, h6 { font-size: 1rem; margin-top: 1rem; }
+h4, h5, h6 { margin-top: 1rem; font-size: 1rem; }
 
-p { margin-bottom: 1rem; margin-top: 0; }
+p { font-family: "plex-sans", sans-serif; margin-top: 0; margin-bottom: 1rem; }
 
-strong { color: #303030; }
+strong { font-family: "plex-sans", sans-serif; color: #303030; }
 
-ul, ol, dl { margin-bottom: 1rem; margin-top: 0; }
+ul, ol, dl { margin-top: 0; margin-bottom: 1rem; }
 
 dt { font-weight: bold; }
 
-dd { margin-bottom: 0.5rem; }
+dd { margin-bottom: .5rem; }
 
-hr { border: 0; border-bottom: 1px solid #fff; border-top: 1px solid #eee; margin: 1.5rem 0; position: relative; }
+hr { position: relative; margin: 1.5rem 0; border: 0; border-top: 1px solid #eee; border-bottom: 1px solid #fff; }
 
-abbr { color: #555; font-size: 85%; font-weight: bold; text-transform: uppercase; }
-abbr[title] { border-bottom: 1px dotted #e5e5e5; cursor: help; }
+abbr { font-size: 85%; font-weight: bold; color: #555; text-transform: uppercase; }
+abbr[title] { cursor: help; border-bottom: 1px dotted #e5e5e5; }
 
-blockquote { border-left: 0.25rem solid #e5e5e5; color: #7a7a7a; margin: 0.8rem 0; padding: 0.5rem 1rem; }
+blockquote { padding: .5rem 1rem; margin: .8rem 0; color: #7a7a7a; border-left: 0.25rem solid #e5e5e5; }
 blockquote p:last-child { margin-bottom: 0; }
-@media (min-width: 30em) { blockquote { padding-left: 1.25rem; padding-right: 5rem; } }
+@media (min-width: 30em) { blockquote { padding-right: 5rem; padding-left: 1.25rem; } }
 
-a[href^='#fn:'], a[href^='#fnref:'] { display: inline-block; font-weight: bold; margin-left: 0.1rem; }
+a[href^="#fn:"], a[href^="#fnref:"] { display: inline-block; margin-left: .1rem; font-weight: bold; }
 
-.footnotes { font-size: 85%; margin-top: 2rem; }
+.footnotes { margin-top: 2rem; font-size: 85%; }
 
 .lead { font-size: 1.25rem; font-weight: 300; }
 
-a svg { fill: #0E0E52; }
-
 a svg, .icon svg { height: 1em; }
+
+a svg { fill: #0E0E52; }
 
 .icon { vertical-align: middle; }
 
@@ -255,98 +258,89 @@ a svg, .icon svg { height: 1em; }
 
 code, pre { font-family: Menlo, Monaco, "Courier New", monospace; }
 
-code { background-color: #f9f9f9; border-radius: 3px; color: #bf616a; font-size: 85%; padding: 0.25em 0.5em; }
+code { padding: .25em .5em; font-size: 85%; color: #bf616a; background-color: #f9f9f9; border-radius: 3px; }
 
-pre { margin-bottom: 1rem; margin-top: 0; max-width: 100%; overflow-x: auto; }
+pre { margin-top: 0; margin-bottom: 1rem; }
 
-pre code { background-color: transparent; color: inherit; font-size: 100%; padding: 0; }
+pre code { padding: 0; font-size: 100%; color: inherit; background-color: transparent; }
 
-.highlight { background-color: #f9f9f9; border-radius: 0.25rem; font-size: 0.8rem; line-height: 1.4; margin-bottom: 1rem; padding: 1rem; }
+.highlight { padding: 1rem; margin-bottom: 1rem; font-size: .8rem; line-height: 1.4; background-color: #f9f9f9; border-radius: .25rem; }
 .highlight pre { margin-bottom: 0; overflow-x: auto; }
-.highlight .lineno { color: #999; display: inline-block; padding-left: 0.25rem; padding-right: 0.75rem; user-select: none; }
+.highlight .lineno { display: inline-block; padding-right: .75rem; padding-left: .25rem; color: #999; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
 
-/* Layout
- Styles for managing the structural hierarchy of the site. Hydeout features the large colored sidebar from Hyde that houses the site name, intro, and "footer" content. Sidebar is on top of content on mobile and expands into sidebar on larger width displays.
- Sidebar CSS assumes HTML looks like this for post pages:
- body > #sidebar > header (primary sidebar content -- i.e. title) > h1 (home page only, otherwise div or span) > secondary nav content we may want to hide on certain pages > .container > h1 (non-home page) > .content
- Basic approach is to color in body, make sidebar background transparent, and then fill in the .container or .content elements depending on how far we want the sidebar or header to stretch.
+pre { max-width: 100%; overflow-x: auto; }
+
+/* Modified original Hydeout theme to accomodate  SVG logo instead of site title, with other small changes.
 */
-body { background-attachment: fixed; background-color: #0E0E52; background-image: linear-gradient(to bottom, #131370, #090934); color: rgba(255, 255, 255, 0.75); display: flex; flex-direction: column; min-height: 100vh; }
+body { color: rgba(255, 255, 255, 0.75); background-color: #0E0E52; background-image: linear-gradient(to bottom, #090934), #131370; display: flex; flex-direction: column; min-width: 100vw; min-height: 100vh; }
 
 #sidebar { flex: 0 0 auto; padding: 2rem; }
-#sidebar .site-title { font-family: 'Abril Fatface', serif; font-size: 1.25rem; font-weight: normal; margin-bottom: 0.5rem; margin-top: 0; }
-#sidebar .site-title .back-arrow { margin-right: 0.5rem; }
+#sidebar .site-logo { display: flex; margin-top: 0; margin-bottom: 0.5rem; }
+#sidebar .site-logo svg { width: 260px; height: auto; }
+
+.container { flex: 1 1 auto; display: flex; flex-direction: column; }
+.container > .content { flex-grow: 1; padding-bottom: 4rem; }
 
 .content { background: #fff; color: #515151; padding: 2rem; }
 
-.container { display: flex; flex: 1 1 auto; flex-direction: column; }
-.container > .content { flex-grow: 1; padding-bottom: 4rem; }
-
 /* ----------------------------------------------------------- Mobile view
 ----------------------------------------------------------- */
+#sidebar .site-logo { justify-content: center; }
 #sidebar header ~ *, #sidebar header ~ nav, #sidebar p.lead { display: none; }
 
-.container > header { background: transparent; color: #fff; margin: -1.5rem 2rem 2rem; }
-.container > header h1, .container > header h2 { color: inherit; }
+.container > header { background: transparent; color: white; margin: -1.5rem 2rem 2rem; }
+.container > header h1, .container > header h2 { color: white; }
 .container > header h1:last-child, .container > header h2:last-child { margin-bottom: 0; }
 
 /* ----------------------------------------------------------- Mobile view for home page)
 ----------------------------------------------------------- */
 .home #sidebar { text-align: center; }
-.home #sidebar .site-title { font-size: 3.25rem; }
 .home #sidebar header ~ *, .home #sidebar p.lead { display: block; }
 .home #sidebar header ~ nav { display: flex; }
 .home #sidebar > *:last-child { margin-bottom: 0.5rem; }
 
 /* ----------------------------------------------------------- Tablet / Desktop view
 ----------------------------------------------------------- */
-@media (min-width: 49rem) { body { flex-direction: row; min-height: 100vh; -webkit-overflow-scrolling: touch; overflow-y: auto; }
-  body > * { -webkit-overflow-scrolling: touch; overflow-y: auto; }
+@media (min-width: 49rem) { body { flex-direction: row; height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  body > * { max-height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
   /* Undo mobile CSS */
-  #sidebar, .home #sidebar { text-align: left; width: 18rem; }
+  #sidebar, .home #sidebar { width: 18rem; text-align: left; }
   #sidebar > *:last-child, .home #sidebar > *:last-child { margin-bottom: 0; }
-  #sidebar { position: fixed; top: 0; left: 0; }
-  #sidebar .site-title { font-size: 3.25rem; }
-  #sidebar .site-title .back-arrow { display: none; }
+  #sidebar .site-logo { justify-content: start; }
   #sidebar p.lead, #sidebar header ~ * { display: block; }
   #sidebar header ~ nav { display: flex; }
   .index #sidebar { margin-bottom: 0; }
-  .container { background: #fff; color: #515151; min-height: 100vh; padding: 4rem 4rem 0; margin-left: 18rem; }
-  .container > header { color: #313131; margin: 0; }
+  .container { background: #fff; color: #515151; padding: 4rem 4rem 0; height: 100vh; }
+  .container > header { color: inherit; margin: 0; }
   .container > header h1, .container > header h2 { color: inherit; }
   .container > header h1:last-child, .container > header h2:last-child { margin-bottom: 0.5rem; }
   .container > * { max-width: 38rem; padding: 0; } }
 /* ----------------------------------------------------------- Sidebar links + nav
 ----------------------------------------------------------- */
-#sidebar a { color: #fff; }
-#sidebar a svg { fill: rgba(255, 255, 255, 0.85); }
-
-#sidebar a:hover svg, #sidebar a:focus svg, #sidebar a.active svg { fill: rgba(255, 255, 255, 0.85); }
-
+#sidebar a { color: white; }
+#sidebar a svg { fill: #e8bc78; }
+#sidebar a:hover svg, #sidebar a:focus svg, #sidebar a.active svg { fill: #f1d6ac; }
 #sidebar a:hover, #sidebar a:focus { text-decoration: underline; }
 #sidebar a:hover.icon, #sidebar a:focus.icon { text-decoration: none; }
-
 #sidebar a.active { font-weight: bold; }
-
-#sidebar .site-title { color: #fff; }
-#sidebar .site-title a { color: inherit; }
 
 #sidebar nav { display: flex; }
 
 #sidebar-nav-links { flex-flow: column nowrap; }
 
-#sidebar-icon-links { flex-flow: row wrap; justify-content: center; margin-top: 1rem; max-width: 100%; }
-@media (min-width: 49rem) { #sidebar-icon-links { justify-content: flex-start; margin-left: -0.25em; } }
+#sidebar-icon-links { max-width: 100%; flex-flow: row wrap; justify-content: center; margin-top: 1rem; }
+@media (min-width: 49rem) { #sidebar-icon-links { margin-left: -0.25em; justify-content: flex-start; } }
 
 #sidebar nav > * { display: block; line-height: 1.75; }
 
-#sidebar nav > .icon { display: inline-block; font-size: 1.5rem; margin: 0 0.25em; }
+#sidebar nav > .icon { fill: #edcb96; font-size: 1.5rem; display: inline-block; margin: 0 0.25em; }
 
-@media print { #sidebar { display: none; }
-  body { display: block; }
-  .container { display: block; margin-left: 0; margin-right: 0; padding: 0; }
-  .container > * { max-width: 100%; }
-  html { font-size: normal; } }
+/* ----------------------------------------------------------- Sticky sidebar
+ Set $sidebar-stick variable to affix sidebar contents to the bottom of the sidebar in tablets and up.
+----------------------------------------------------------- */
+/* ----------------------------------------------------------- Reverse layout
+ Flip the orientation of the page by placing the `#sidebar` on the right.
+----------------------------------------------------------- */
 .masthead { margin-bottom: 3rem; padding-bottom: 1rem; padding-top: 1rem; }
 
 .masthead-title { color: #515151; margin-bottom: 0; margin-top: 0; }
@@ -417,7 +411,3 @@ button.disqus-load { margin-top: 1em; }
   to { opacity: 1; } }
 .posts-for-tag { display: none; }
 .posts-for-tag:target { animation: posts-for-tag-fade-in 0.6s ease-in-out; display: block; }
-
-.back-link { font-size: 80%; }
-.back-link a { color: currentColor; }
-.back-link a svg { fill: currentColor; }

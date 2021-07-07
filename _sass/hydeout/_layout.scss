@@ -1,0 +1,278 @@
+/*
+  Modified original Hydeout theme to accomodate 
+  SVG logo instead of site title, with other small changes.
+*/
+
+body {
+  color: rgba(255,255,255,.75);
+  background-color: $sidebar-bg-color;
+  background-image: linear-gradient(
+    to bottom,
+    darken($sidebar-bg-color, 7%)),
+    lighten($sidebar-bg-color, 7%);
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#sidebar {
+  flex: 0 0 auto;
+  padding: $section-spacing;
+
+  .site-logo {
+	  display: flex;
+	  margin-top: 0;
+	  margin-bottom: $heading-spacing;
+
+	  svg {
+	    width: 260px;
+	    height:auto;
+    }
+  }
+}
+
+// Container is flexbox as well -- we want content div to stretch and fill
+.container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  > .content {
+    flex-grow: 1;
+    padding-bottom: $section-spacing * 2;
+  }
+}
+
+.content {
+  background: $body-bg;
+  color: $body-color;
+  padding: $section-spacing;
+}
+
+
+/* -----------------------------------------------------------
+  Mobile view
+----------------------------------------------------------- */
+
+// Hide secondary nav content in sidebar
+// Hide lead paragraph in sidebar
+#sidebar {
+  
+ .site-logo {
+   justify-content: center;
+ }
+  header ~ *, header ~ nav, p.lead {
+    display: none;
+  }
+}
+
+// Make header elements blend into sidebar / background
+.container > header {
+  background: transparent;
+  color: white;
+  margin: ($heading-spacing - $section-spacing)
+          $section-spacing
+          $section-spacing;
+
+  h1, h2 {
+    color: white;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+/* -----------------------------------------------------------
+  Mobile view for home page)
+----------------------------------------------------------- */
+
+.home #sidebar {
+
+  // Center sidebar content
+  text-align: center;
+
+  // Show secondary nav content + lead
+  header ~ *, p.lead {
+    display: block;
+  }
+
+  header {
+    ~ nav {
+      display: flex;
+    }
+  }
+
+  // Slightly more bottom padding to compensate for heading not match 100% of
+  // line-height on top
+  > *:last-child {
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+/* -----------------------------------------------------------
+  Tablet / Desktop view
+----------------------------------------------------------- */
+
+@media (min-width: $large-breakpoint) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    > * {
+      max-height: 100vh; 
+      overflow-y: auto; 
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  /* Undo mobile CSS */
+
+  #sidebar, .home #sidebar {
+    width: $sidebar-width;
+    text-align: left;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #sidebar {
+    .site-logo {
+      justify-content: start;
+    }
+
+    p.lead, header ~ * {
+      display: block;
+    }
+
+    header ~ nav {
+      display: flex;
+    }
+  }
+
+  .index #sidebar { margin-bottom: 0; }
+
+  // Make entire container background white to contrast against sidebar
+  .container {
+    background: $body-bg;
+    color: $body-color;
+    padding: $section-spacing * 2
+             $section-spacing * 2
+             0;
+    height: 100vh;
+
+    > header {
+      color: inherit;
+      margin: 0;
+      h1, h2 {
+        color: inherit;
+
+        &:last-child {
+          margin-bottom: $heading-spacing;
+        }
+      }
+    }
+
+    > * {
+      max-width: 38rem;
+      padding: 0;
+    }
+  }
+}
+
+
+/* -----------------------------------------------------------
+  Sidebar links + nav
+----------------------------------------------------------- */
+
+#sidebar a {
+  color: white;
+
+  svg {
+    fill: darken($secondary-color, 7%);
+  }
+
+  &:hover, &:focus, &.active {
+    svg { fill: lighten($secondary-color, 5%); }
+  }
+
+  &:hover, &:focus {
+    text-decoration: underline;
+    &.icon {
+      text-decoration: none;
+    }
+  }
+
+  &.active {
+    font-weight: bold;
+  }
+}
+
+#sidebar nav {
+  display: flex;
+}
+
+#sidebar-nav-links {
+  flex-flow: column nowrap;
+}
+
+#sidebar-icon-links {
+  max-width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @media (min-width: $large-breakpoint) {
+    margin-left: -0.25em;
+    justify-content: flex-start;
+  }
+}
+
+#sidebar nav > * {
+  display: block;
+  line-height: 1.75;
+}
+
+#sidebar nav > .icon {
+  fill: $secondary-color;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+
+/* -----------------------------------------------------------
+  Sticky sidebar
+
+  Set $sidebar-stick variable to affix sidebar contents to the
+  bottom of the sidebar in tablets and up.
+----------------------------------------------------------- */
+
+@if $sidebar-sticky {
+  @media (min-width: $large-breakpoint) {
+    body {
+      align-items: flex-end;
+    }
+  }
+}
+
+
+/* -----------------------------------------------------------
+  Reverse layout
+
+  Flip the orientation of the page by placing the `#sidebar`
+  on the right.
+----------------------------------------------------------- */
+
+@if $layout-reverse {
+  @media (min-width: $large-breakpoint) {
+    .container {
+      order: -1;
+    }
+  }
+}
