@@ -284,6 +284,7 @@ body { color: rgba(255, 255, 255, 0.75); background-color: #0E0E52; background-i
 
 .container { flex: 1 1 auto; display: flex; flex-direction: column; }
 .container > .content { flex-grow: 1; padding-bottom: 4rem; }
+.container .back-link { display: none; }
 .container .branded-end { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 .container .bio { display: flex; flex-direction: row; align-items: start; text-align: left; padding: 18px 0px 10px 0px; justify-content: space-around; }
 .container .bio-pic { flex: 1 1 auto; }

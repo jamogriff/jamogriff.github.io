@@ -43,6 +43,11 @@ body {
     padding-bottom: $section-spacing * 2;
   }
 
+  // Don't know where back-link comes from but they're broken back buttons from the remote theme
+  .back-link {
+	  display: none;
+  }
+
   .branded-end {
 	  display: flex;
 	  flex-direction: row;
