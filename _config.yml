@@ -28,14 +28,17 @@ github_username:  jamogriff
 
 # Build settings
 # Development Theme
-#theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
+theme: jekyll-theme-hydeout # took this out so GitHub Pages doesn't cry
 
 # Production theme
-remote_theme: fongandrew/hydeout # line added so GitHub Pages adds theme correctly
+#remote_theme: fongandrew/hydeout # line added so GitHub Pages adds theme correctly
 
 plugins:
   - jekyll-feed
 
+permalink:
+  /:categories/:title
+  
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,0 +1,13 @@
+---
+layout: page
+---
+{{ content }}
+<ul class="posts-list">
+	{% assign category = page.category %}
+	{% for post in site.categories[category] %}
+	<li>
+		<h3>Week of {{ post.date | date_to_string: "ordinal", "US" }} </h3>
+		<p> {{ post.content }}</p>
+	</li>
+	{% endfor %}
+</ul>

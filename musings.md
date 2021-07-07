@@ -1,6 +1,7 @@
 ---
 layout: category
 title: Musings
+category: musings
 permalink: /musings
 ---
 
