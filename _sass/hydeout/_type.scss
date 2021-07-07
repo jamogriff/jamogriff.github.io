@@ -4,6 +4,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "plex-mono", serif;
+  font-weight: bold;
   margin-bottom: $heading-spacing;
   font-weight: 600;
   line-height: 1.25;
@@ -32,8 +33,13 @@ h4, h5, h6 {
 
 p {
   font-family: "plex-sans", sans-serif;
+  font-weight: regular;
   margin-top: 0;
   margin-bottom: 1rem;
+
+  a {
+	  font-weight: bold;
+  }
 }
 
 strong {

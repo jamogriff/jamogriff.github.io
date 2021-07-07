@@ -10,9 +10,27 @@ $font-path: "../branding/fonts";
 @font-face {
 font-family: "plex-mono";
 src: url("#{$font-path}/PlexMono-Bold.ttf") format("truetype");
+font-weight: bold;
+}
+
+@font-face {
+font-family: "plex-mono";
+src: url("#{$font-path}/PlexMono-Reg.ttf") format("truetype");
+font-weight: regular;
 }
 
 @font-face {
 font-family: "plex-sans";
-src: url("#{$font-path}/PlexSans.ttf") format("truetype");
+src: url("#{$font-path}/PlexSans-Reg.ttf") format("truetype");
+font-weight: regular;
+}
+@font-face {
+font-family: "plex-sans";
+src: url("#{$font-path}/PlexSans-Bold.ttf") format("truetype");
+font-weight: bold;
+}
+@font-face {
+font-family: "plex-sans";
+src: url("#{$font-path}/PlexSans-Light.ttf") format("truetype");
+font-weight: light;
 }
