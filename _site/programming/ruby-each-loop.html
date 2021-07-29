@@ -11,7 +11,7 @@
 
   <title>
     
-      Coding & Design &middot; Jamison Codes
+      Ruby's Each Loop Eventually Ends in Heartbreak &middot; Jamison Codes
     
   </title>
 
@@ -39,7 +39,7 @@
 </head>
 
 
-  <body class="category">
+  <body class="post">
 
     <div id="sidebar">
   <header>
@@ -197,7 +197,7 @@
 
   
     
-      <a class="category-link  active"
+      <a class="category-link "
           href="/programming">Coding & Design</a>
     
   
@@ -266,51 +266,177 @@
 
     <main class="container">
       <header>
-  
-
-    <p class="back-link">
-    <a href=""><span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 0h24v24H0z" fill="none"/>
-  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-</svg></span></a>
-    </p>
-
-
-  <h1 class="page-title">Coding & Design</h1>
+  <h1 class="post-title">Ruby's Each Loop Eventually Ends in Heartbreak</h1>
 </header>
 <div class="content">
-  
-  <p><img src="/assets/images/misc/steveandbill.jpg" alt="Steve and Bill" title="Steve Jobs and Bill Gates in their early days" /></p>
+  <div class="post-meta">
+  <span class="post-date">29 Jul 2021</span>
+  <span class="post-categories">
+    
+      &bull;
 
-<p>Programming has been, and continues to be, a long and remarkable journey for me. Periodically I get an itch to flex my technical writing skills and post code walkthroughs and challenges here. I have a background in philosophy and design, so I enjoy tying in the <em>why</em> of things as well as noteworthy design whenever I can.</p>
+      
+      
+      
 
-
-
-<ul class="posts-list">
-  
-  
-    <li>
-      <h3>
-        <a href="/programming/ruby-each-loop">
-          Ruby's Each Loop Eventually Ends in Heartbreak
-          <small> 965 Words  |  Jul 29th, 2021</small>
+      
+        <a href="/programming">
+          Coding & Design
         </a>
-      </h3>
-    </li>
-  
-</ul>
-
+      
+    
+  </span>
 </div>
 
 
-    <p class="back-link">
-    <a href=""><span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 0h24v24H0z" fill="none"/>
-  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-</svg></span></a>
-    </p>
+  <div class="post-body">
+    <h2 id="the-gold-standard">The Gold Standard</h2>
+
+<p>When I began learning Ruby, one of the things I noticed that it was missing a very familiar tool that I had taken for granted in PHP and C++.</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// look upon the glory that is the for loop</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>That small loop allows for a ton of custom iteration and is found in many programming languages. Ruby’s replacement of the <code class="language-plaintext highlighter-rouge">for</code> loop was taught to me as the <code class="language-plaintext highlighter-rouge">each</code> loop, which abstracts out for loop’s parameters by assuming a programmer will always want to iterate over the elements of an entire set. It adds additional flexibility by using a placeholder for each element to be referenced within the iterative loop.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">elem</span><span class="o">|</span>
+  <span class="sr">//</span> <span class="n">elem</span> <span class="n">is</span> <span class="k">then</span> <span class="n">referenced</span> <span class="n">as</span> <span class="n">an</span> <span class="n">object</span> <span class="n">within</span> <span class="n">the</span> <span class="n">block</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Many months had passed since that day. Projects were built and frameworks learned, and I slowly forgot about that old loop. Only until today did I realize that Ruby’s <code class="language-plaintext highlighter-rouge">each</code> loop is not a replacement and treating it as such can lead down the wrong path.</p>
+
+<h2 id="enter-binary-trees">Enter Binary Trees</h2>
+
+<p>When traversing binary trees one typically uses a data structure known as a <em>queue</em> to make sense of the relationships. The queue is just like a line at Jimmy John’s: The first person in line is the first person served, and then they exit. Every customer gets processed piece-wise until the lunch rush ends.</p>
+
+<p>In terms of a <a href="https://en.wikipedia.org/wiki/Binary_tree">binary tree</a>, the queue is used in the following manner:</p>
+<ol>
+  <li>Start with the root of the tree in the queue</li>
+  <li>Add root’s children to the queue (if exist)</li>
+  <li>Remove root from the queue</li>
+  <li>Begin iterating next queue (now consisting of root’s children)</li>
+</ol>
+
+<p>Queues are used alongside the <a href="https://en.wikipedia.org/wiki/Breadth-first_search">Breadth-first search (BFS)</a> algorithm to search through trees. In the midst of building my own BFS algorithm was when I realized that using <code class="language-plaintext highlighter-rouge">#each</code> in Ruby for all iterative problems isn’t appropriate.</p>
+
+<h2 id="problem--solution">Problem &amp; Solution</h2>
+
+<p>The problem I was trying to solve was a straightforward one: <a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/">return the average value of the nodes on each level</a>. I studied this problem for many hours, watched videos on BFS and examined other user’s solutions. Once I had wrapped my head around how the algorithm worked I then set out to build my own, but reaching for an each loop to solve this led to confusing results that I couldn’t make out for a long, frustrating time. Note in my solution below how the <code class="language-plaintext highlighter-rouge">times</code> loop was used instead of <code class="language-plaintext highlighter-rouge">each</code>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Definition for a binary tree node.</span>
+<span class="c1"># class TreeNode</span>
+<span class="c1">#     attr_accessor :val, :left, :right</span>
+<span class="c1">#     def initialize(val = 0, left = nil, right = nil)</span>
+<span class="c1">#         @val = val</span>
+<span class="c1">#         @left = left</span>
+<span class="c1">#         @right = right</span>
+<span class="c1">#     end</span>
+<span class="c1"># end</span>
+<span class="c1"># @param {TreeNode} root</span>
+<span class="c1"># @return {Float[]}</span>
+
+<span class="c1"># Find the average val at each level of a binary tree</span>
+<span class="k">def</span> <span class="nf">average_of_levels</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+  <span class="n">queue</span> <span class="o">=</span> <span class="p">[</span><span class="n">root</span><span class="p">]</span>
+  <span class="n">avg_per_level</span> <span class="o">=</span> <span class="p">[]</span>
+    
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">queue</span><span class="p">.</span><span class="nf">empty?</span><span class="p">)</span> <span class="k">do</span>
+    <span class="c1"># For a binary tree of n levels we should hit this block n times</span>
+    <span class="n">level_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">elems_in_level</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="nf">length</span>
+      
+    <span class="c1"># An each loop isn't appropiate here because we're adding children</span>
+    <span class="c1"># to the next queue to be processed at the end of this loop. #each will</span>
+    <span class="c1"># keep iterating over the child elements and won't allow us to stop</span>
+    <span class="c1"># at each level and capture information while we traverse the tree.</span>
+    <span class="n">elems_in_level</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="c1"># Pull first element in queue</span>
+      <span class="n">current_node</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="nf">shift</span>
+      <span class="n">level_sum</span> <span class="o">+=</span> <span class="n">current_node</span><span class="p">.</span><span class="nf">val</span>
+
+      <span class="c1"># Check for node's children, if exist, add to queue</span>
+      <span class="n">queue</span> <span class="o">&lt;&lt;</span> <span class="n">current_node</span><span class="p">.</span><span class="nf">left</span> <span class="k">if</span> <span class="n">current_node</span><span class="p">.</span><span class="nf">left</span> <span class="o">!=</span> <span class="kp">nil</span>
+      <span class="n">queue</span> <span class="o">&lt;&lt;</span> <span class="n">current_node</span><span class="p">.</span><span class="nf">right</span> <span class="k">if</span> <span class="n">current_node</span><span class="p">.</span><span class="nf">right</span> <span class="o">!=</span> <span class="kp">nil</span>
+    <span class="k">end</span>
+    <span class="n">avg_per_level</span> <span class="o">&lt;&lt;</span> <span class="n">counter</span><span class="o">/</span><span class="n">num_of_elems</span><span class="p">.</span><span class="nf">to_f</span>
+  <span class="k">end</span>
+  <span class="n">avg_per_level</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Want to know how many times I have used a <code class="language-plaintext highlighter-rouge">times</code> loop to solve an actual programming problem in Ruby? Zero. The Turing School of Software and Design teach the <code class="language-plaintext highlighter-rouge">each</code> loop as if it is a perfect stand-in for a <code class="language-plaintext highlighter-rouge">for</code> loop, and while that may be true for 99% of programming problems, there would have been no way for me to solve the above problem using an <code class="language-plaintext highlighter-rouge">each</code> loop using my approach.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Currently, there are only 5 submissions out of 999+ for a Ruby-based solution to the above problem, which I find hilarious. This experience has opened my eyes into how a language can hinder you if you don’t examine the assumptions that are made in the inner workings of its de facto iterative loop. The beauty of C’s <code class="language-plaintext highlighter-rouge">for</code> loop is it’s so low-level there are no assumptions based into it.</p>
+
+<p>Unfortunately, now when I work in Ruby on actual comp-sci topics I have the mental weight of deciding between two different loops instead of having a single de facto one in my toolkit.</p>
+
+    
 
 
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  <!-- removed because I don't care about implementing comments at this time 
+
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <p>
+    You are seeing this because your Disqus shortname is not properly set. To
+    configure Disqus, you should edit your <code>_config.yml</code> to include
+    either a <code>disqus.shortname</code> variable.
+  </p>
+
+  <p>
+    If you do not wish to use Disqus, override the
+    <code>comments.html</code> partial for this theme.
+  </p>
+
+
+  </section>
+
+ -->
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/worklog/log">
+            Log
+            <small>26 Jul 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/worklog/log">
+            Log
+            <small>19 Jul 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/worklog/log">
+            Log
+            <small>12 Jul 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
 
 
       <div class="branded-end">

@@ -1,7 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-16T14:33:45-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jamison Codes</title><subtitle>For that spark of imagination.</subtitle><entry><title type="html">Log</title><link href="http://localhost:4000/worklog/log" rel="alternate" type="text/html" title="Log" /><published>2021-07-12T00:00:00-06:00</published><updated>2021-07-12T00:00:00-06:00</updated><id>http://localhost:4000/worklog/log</id><content type="html" xml:base="http://localhost:4000/worklog/log">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[] Javascript intro
-[] Build out 10 endpoints in Rails Engine API
-[] Implement OAuth workflow in rebranded Esty Shop
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="worklog" /><summary type="html">[] Javascript intro [] Build out 10 endpoints in Rails Engine API [] Implement OAuth workflow in rebranded Esty Shop</summary></entry><entry><title type="html">Log</title><link href="http://localhost:4000/worklog/log" rel="alternate" type="text/html" title="Log" /><published>2021-07-03T00:00:00-06:00</published><updated>2021-07-03T00:00:00-06:00</updated><id>http://localhost:4000/worklog/log</id><content type="html" xml:base="http://localhost:4000/worklog/log">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[x] Configure and deploy Travis CI on website repo
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-29T16:10:33-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jamison Codes</title><subtitle>For that spark of imagination.</subtitle><entry><title type="html">Ruby’s Each Loop Eventually Ends in Heartbreak</title><link href="http://localhost:4000/programming/ruby-each-loop" rel="alternate" type="text/html" title="Ruby’s Each Loop Eventually Ends in Heartbreak" /><published>2021-07-29T00:00:00-06:00</published><updated>2021-07-29T00:00:00-06:00</updated><id>http://localhost:4000/programming/ruby-each-loop</id><content type="html" xml:base="http://localhost:4000/programming/ruby-each-loop">&lt;h2 id=&quot;the-gold-standard&quot;&gt;The Gold Standard&lt;/h2&gt;
+
+&lt;p&gt;When I began learning Ruby, one of the things I noticed that it was missing a very familiar tool that I had taken for granted in PHP and C++.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// look upon the glory that is the for loop&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That small loop allows for a ton of custom iteration and is found in many programming languages. Ruby’s replacement of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loop was taught to me as the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each&lt;/code&gt; loop, which abstracts out for loop’s parameters by assuming a programmer will always want to iterate over the elements of an entire set. It adds additional flexibility by using a placeholder for each element to be referenced within the iterative loop.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;referenced&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;an&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;within&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Many months had passed since that day. Projects were built and frameworks learned, and I slowly forgot about that old loop. Only until today did I realize that Ruby’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each&lt;/code&gt; loop is not a replacement and treating it as such can lead down the wrong path.&lt;/p&gt;
+
+&lt;h2 id=&quot;enter-binary-trees&quot;&gt;Enter Binary Trees&lt;/h2&gt;
+
+&lt;p&gt;When traversing binary trees one typically uses a data structure known as a &lt;em&gt;queue&lt;/em&gt; to make sense of the relationships. The queue is just like a line at Jimmy John’s: The first person in line is the first person served, and then they exit. Every customer gets processed piece-wise until the lunch rush ends.&lt;/p&gt;
+
+&lt;p&gt;In terms of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Binary_tree&quot;&gt;binary tree&lt;/a&gt;, the queue is used in the following manner:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Start with the root of the tree in the queue&lt;/li&gt;
+  &lt;li&gt;Add root’s children to the queue (if exist)&lt;/li&gt;
+  &lt;li&gt;Remove root from the queue&lt;/li&gt;
+  &lt;li&gt;Begin iterating next queue (now consisting of root’s children)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Queues are used alongside the &lt;a href=&quot;https://en.wikipedia.org/wiki/Breadth-first_search&quot;&gt;Breadth-first search (BFS)&lt;/a&gt; algorithm to search through trees. In the midst of building my own BFS algorithm was when I realized that using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#each&lt;/code&gt; in Ruby for all iterative problems isn’t appropriate.&lt;/p&gt;
+
+&lt;h2 id=&quot;problem--solution&quot;&gt;Problem &amp;amp; Solution&lt;/h2&gt;
+
+&lt;p&gt;The problem I was trying to solve was a straightforward one: &lt;a href=&quot;https://leetcode.com/problems/average-of-levels-in-binary-tree/&quot;&gt;return the average value of the nodes on each level&lt;/a&gt;. I studied this problem for many hours, watched videos on BFS and examined other user’s solutions. Once I had wrapped my head around how the algorithm worked I then set out to build my own, but reaching for an each loop to solve this led to confusing results that I couldn’t make out for a long, frustrating time. Note in my solution below how the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;times&lt;/code&gt; loop was used instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Definition for a binary tree node.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# class TreeNode&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#     attr_accessor :val, :left, :right&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#     def initialize(val = 0, left = nil, right = nil)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#         @val = val&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#         @left = left&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#         @right = right&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#     end&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# end&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# @param {TreeNode} root&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# @return {Float[]}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Find the average val at each level of a binary tree&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;average_of_levels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;avg_per_level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;empty?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# For a binary tree of n levels we should hit this block n times&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;level_sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;elems_in_level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;
+      
+    &lt;span class=&quot;c1&quot;&gt;# An each loop isn't appropiate here because we're adding children&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# to the next queue to be processed at the end of this loop. #each will&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# keep iterating over the child elements and won't allow us to stop&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# at each level and capture information while we traverse the tree.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;elems_in_level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;# Pull first element in queue&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;current_node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shift&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;level_sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;val&lt;/span&gt;
+
+      &lt;span class=&quot;c1&quot;&gt;# Check for node's children, if exist, add to queue&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;avg_per_level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_of_elems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_f&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;avg_per_level&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Want to know how many times I have used a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;times&lt;/code&gt; loop to solve an actual programming problem in Ruby? Zero. The Turing School of Software and Design teach the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each&lt;/code&gt; loop as if it is a perfect stand-in for a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loop, and while that may be true for 99% of programming problems, there would have been no way for me to solve the above problem using an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each&lt;/code&gt; loop using my approach.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Currently, there are only 5 submissions out of 999+ for a Ruby-based solution to the above problem, which I find hilarious. This experience has opened my eyes into how a language can hinder you if you don’t examine the assumptions that are made in the inner workings of its de facto iterative loop. The beauty of C’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loop is it’s so low-level there are no assumptions based into it.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, now when I work in Ruby on actual comp-sci topics I have the mental weight of deciding between two different loops instead of having a single de facto one in my toolkit.&lt;/p&gt;</content><author><name></name></author><category term="programming" /><summary type="html">The Gold Standard</summary></entry><entry><title type="html">Log</title><link href="http://localhost:4000/worklog/log" rel="alternate" type="text/html" title="Log" /><published>2021-07-26T00:00:00-06:00</published><updated>2021-07-26T00:00:00-06:00</updated><id>http://localhost:4000/worklog/log</id><content type="html" xml:base="http://localhost:4000/worklog/log">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[x] Refactor Rails Engine to accept JSON payloads
+[x] Overhaul Rails Driver JavaScript front-end
+[x] Polish Rails Engine/Driver projects with documentation
+[] Hack on large open source JavaScript/Rails project (FTP)
+[] Study DFS and Fast &amp;amp; Slow Pointer algorithms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="worklog" /><summary type="html">[x] Refactor Rails Engine to accept JSON payloads [x] Overhaul Rails Driver JavaScript front-end [x] Polish Rails Engine/Driver projects with documentation [] Hack on large open source JavaScript/Rails project (FTP) [] Study DFS and Fast &amp;amp; Slow Pointer algorithms</summary></entry><entry><title type="html">Log</title><link href="http://localhost:4000/worklog/log" rel="alternate" type="text/html" title="Log" /><published>2021-07-19T00:00:00-06:00</published><updated>2021-07-19T00:00:00-06:00</updated><id>http://localhost:4000/worklog/log</id><content type="html" xml:base="http://localhost:4000/worklog/log">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[x] Build 4 business intelligence endpoints in Rails Engine API
+[x] Implement substantial validations for user-defined date parameters
+[x] Integrate Rails Engine API with Javascript frontend
+[] Hack on large open source Typescript project (MDDL)
+[] Solve 4 intermediate code challenges on Exercism/Codewars
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="worklog" /><summary type="html">[x] Build 4 business intelligence endpoints in Rails Engine API [x] Implement substantial validations for user-defined date parameters [x] Integrate Rails Engine API with Javascript frontend [] Hack on large open source Typescript project (MDDL) [] Solve 4 intermediate code challenges on Exercism/Codewars</summary></entry><entry><title type="html">Log</title><link href="http://localhost:4000/worklog/log" rel="alternate" type="text/html" title="Log" /><published>2021-07-12T00:00:00-06:00</published><updated>2021-07-12T00:00:00-06:00</updated><id>http://localhost:4000/worklog/log</id><content type="html" xml:base="http://localhost:4000/worklog/log">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[x] Javascript intro
+[x] Build out 11 endpoints in Rails Engine API
+[] Implement OAuth workflow in Guild Market
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="worklog" /><summary type="html">[x] Javascript intro [x] Build out 11 endpoints in Rails Engine API [] Implement OAuth workflow in Guild Market</summary></entry><entry><title type="html">Log</title><link href="http://localhost:4000/worklog/log" rel="alternate" type="text/html" title="Log" /><published>2021-07-03T00:00:00-06:00</published><updated>2021-07-03T00:00:00-06:00</updated><id>http://localhost:4000/worklog/log</id><content type="html" xml:base="http://localhost:4000/worklog/log">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[x] Configure and deploy Travis CI on website repo
 [x] Implement RSpec and HtmlProofer test frameworks in Jekyll
 [x] Rebrand with logo design, typography and color assets
 [x] Learn Sass to make styling tweaks to Jekyll site
