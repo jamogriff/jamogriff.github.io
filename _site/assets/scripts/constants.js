@@ -17,11 +17,12 @@ const Constants = {
 	SIZE: aspectRatio(BANNER_WIDTH, CELL_FACTOR, HEIGHT_RATIO),
 GRID_WIDTH: GRID_WIDTH, // thickness of the maze walls
 	CANVAS: document.querySelector("#banner"),
-	BG_COLOR: "#0E0E52", // midnight blue
+	BG_COLOR_1: "#0E0E52", // midnight blue
+	BG_COLOR_2: "black",
 	PRIMARY_COLOR: "#edcb96",
-	GRADIENT_1: "#20BF55", // dark pastel green
-	GRADIENT_2: "#228CDB", // green blue crayola
-	GRADIENT_3: "#FFB8D1" // cotton candy
+	GRADIENT_1: "#E34234", // dark pastel green
+	GRADIENT_2: "#FFB8D1", // green blue crayola
+	GRADIENT_3: "#0E0E52" // cotton candy
 };
 
 export default Constants

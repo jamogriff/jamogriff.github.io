@@ -29,9 +29,9 @@ export default class Banner {
 			this.width,
 			this.height
 		);
-		gradient.addColorStop(0, Constants.GRADIENT_3); 
+		gradient.addColorStop(0, Constants.GRADIENT_1); 
 		gradient.addColorStop(0.6, Constants.GRADIENT_2);
-		gradient.addColorStop(1, Constants.GRADIENT_1); 
+		gradient.addColorStop(1, Constants.GRADIENT_3); 
 		return gradient;
 	}
 }

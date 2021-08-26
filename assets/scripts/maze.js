@@ -59,7 +59,7 @@ export default class Maze {
 
 		// TODO: Add indication animation to indicate backtracking
 		if (neighbor) {
-			currentCell.highlight(this.columns, this.rows, Constants.PRIMARY_COLOR);
+			currentCell.highlight(this.columns, this.rows);
 			this.stack.push(currentCell);
 			currentCell.removeWalls(neighbor);
 			neighbor.params.visited = true;
@@ -67,7 +67,7 @@ export default class Maze {
 			currentCell = neighbor;
 		} else if (this.stack.length > 0) {
 			currentCell = this.stack.pop();
-			currentCell.highlight(this.columns, this.rows, Constants.PRIMARY_COLOR);
+			currentCell.highlight(this.columns, this.rows);
 		}
 
 		if (this.stack.length == 0) {
@@ -128,11 +128,11 @@ class Cell {
 		);
 
 		if (this.params.visited)
-			this.fill(x, y, rows, columns, Constants.BG_COLOR);
+			this.fill(x, y, rows, columns, Constants.BG_COLOR_2);
 	}
 
 	// Columns and rows from maze are passed in to set size of cell
-	highlight(columns, rows, color) {
+	highlight(columns, rows) {
 		// transparency added to add a trailing effect in future iteration
 		let alpha = "";
 		// Refactor to switch cases
@@ -142,7 +142,7 @@ class Cell {
 		let x = (this.params.column * this.mazeWidth) / columns;
 		let y = (this.params.row * this.mazeHeight) / rows;
 
-		this.fill(x, y, rows, columns, color);
+		this.fill(x, y, rows, columns, Constants.PRIMARY_COLOR);
 	}
 
 	// Logically removes walls, but doesn't render this change

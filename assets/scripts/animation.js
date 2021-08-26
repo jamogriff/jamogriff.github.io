@@ -18,8 +18,8 @@ let opacityCheck2 = 0;
 const ctx = Constants.CANVAS.getContext("2d");
 
 export default class AnimationHandler {
-	static start(text, color) {
-		Animation.typeWriter(text, color);
+	static start(text) {
+		Animation.typeWriter(text);
 	}
 	/*
 	The main function that uses time delay to wait
@@ -120,7 +120,7 @@ export class Animation {
 		let image = document.getElementById("brand");
 		ctx.globalAlpha = 1;
 
-		ctx.fillStyle = Constants.BG_COLOR;
+		ctx.fillStyle = Constants.BG_COLOR_1;
 		ctx.fillRect(0, 0, width, height);
 		opacity += 0.04;
 		ctx.globalAlpha = opacity;
@@ -165,7 +165,7 @@ export class Animation {
 				height
 			);
 		} else {
-			ctx.fillStyle = Constants.BG_COLOR;
+			ctx.fillStyle = Constants.BG_COLOR_2;
 			ctx.fillRect(
 				Constants.GRID_WIDTH,
 				Constants.GRID_WIDTH,
@@ -195,7 +195,7 @@ export class Animation {
 	static typeWriter(textObj) {
 		let text = "node maze-gen.js";
 		let letters = "> " + text.substr(0, textCounter) + "\u258B";
-		ctx.fillStyle = Constants.BG_COLOR;
+		ctx.fillStyle = Constants.BG_COLOR_1;
 		ctx.fillRect(0, 0, textObj.canvasWidth, textObj.canvasHeight);
 
 		ctx.fillStyle = Constants.PRIMARY_COLOR;
