@@ -286,6 +286,7 @@ body { color: rgba(255, 255, 255, 0.75); background-color: #0E0E52; background-i
 .container > .content { flex-grow: 1; padding-bottom: 4rem; }
 .container .back-link { display: none; }
 .container .branded-end { display: flex; flex-direction: row; justify-content: center; align-items: center; }
+.container .branded-end p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .container canvas { padding-left: 0; padding-right: 0; padding-bottom: 15px; margin-left: auto; margin-right: auto; display: block; width: 100%; }
 .container .bio { display: flex; flex-direction: row; align-items: center; text-align: left; padding: 12px 0px 10px 0px; justify-content: space-around; }
 .container .bio-pic { flex: 1; }
