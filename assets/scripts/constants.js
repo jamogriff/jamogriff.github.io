@@ -7,10 +7,10 @@ cell factor is a percentage of width that determines how small/large each cell i
 	- 0.05 large cells
 Additionally, grid width determines how thick the maze walls will be.
 */
-const BANNER_WIDTH = 400;
-const HEIGHT_RATIO = 4;
-const CELL_FACTOR = 0.05;
-const GRID_WIDTH = 4;
+const BANNER_WIDTH = 760;
+const HEIGHT_RATIO = 3.2;
+const CELL_FACTOR = 0.025;
+const GRID_WIDTH = 6;
 
 const Constants = {
 

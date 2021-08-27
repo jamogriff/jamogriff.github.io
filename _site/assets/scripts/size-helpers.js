@@ -6,7 +6,7 @@ and 0.2 produce consistent results.
 */
 export function aspectRatio(width, cellFactor, ratio) {
 	// would be preferable to implement promise here
-	if (width < 200 || width > 800) return undefined;
+	if (width < 200 || width > 1300) return undefined;
 	else {
 		let numCol = width * cellFactor; // Wall rendering was visually tuned to cell size being 10%
 		let height = width / ratio;
@@ -23,7 +23,7 @@ export function aspectRatio(width, cellFactor, ratio) {
 // Used to place a logo/img directly in the center of a canvas
 export function logoPlacement(width, height) {
 	// Using Canvas height to constrain height of logo
-	let yBuffer = 20; // space buffer above and below logo
+	let yBuffer = 60; // space buffer above and below logo
 	let logoHeight = height - yBuffer;
 	let logoWidth = logoHeight * 2.5; // 2.5:1 is aspect ratio of my logo, YMMV
 	let logoX = width / 2 - logoWidth / 2;
