@@ -7,7 +7,7 @@ theme: jekyll-theme-gruv-poole
 
 about:
   image:
-    src: assets/banner-assets/logo-optimized.svg 
+    src: assets/images/jamo.jpg 
     alt: Image of Jamogriff
   socials:
     - { id: github, url: https://github.com/jamogriff }

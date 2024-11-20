@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Ruby's Each Loop Eventually Ends in Heartbreak"
+title: "Don't Forget Your Fundamental Loops"
 ---
+
+> **Editor's Note:** Oh sweet summer child... there is a for loop in Ruby.
 
 ## The Gold Standard
 
-When I began learning Ruby, one of the things I noticed that it was missing a very familiar tool that I had taken for granted in PHP and C++.
+When I began learning Ruby at [Turing School of Software and Design](https://turing.edu/), one of the things I noticed was that it seemed to be missing a very familiar tool that I had taken for granted in PHP and C++.
 
 {% highlight c++ %}
 for (int i = 0, i < num, i++) {
@@ -37,7 +39,9 @@ Queues are used alongside the [Breadth-first search (BFS)](https://en.wikipedia.
 
 ## Problem & Solution
 
-The problem I was trying to solve was a straightforward one: [return the average value of the nodes on each level](https://leetcode.com/problems/average-of-levels-in-binary-tree/). I studied this problem for many hours, watched videos on BFS and examined other user's solutions. Once I had wrapped my head around how the algorithm worked I then set out to build my own, but reaching for an each loop to solve this led to confusing results that I couldn't make out for a long, frustrating time. Note in my solution below how the `times` loop was used instead of `each`.
+The problem I was trying to solve was a straightforward one: [return the average value of the nodes on each level](https://leetcode.com/problems/average-of-levels-in-binary-tree/). I studied this problem for many hours, watched videos on BFS and examined other user's solutions. Once I had wrapped my head around how the algorithm worked I then set out to build my own.
+
+As it turned out reaching for an `each` loop to solve this led to confusing results that I couldn't make out for a long, frustrating time. Note in my solution below how I ended up using the `times` loop instead of `each`.
 
 ```ruby
 # Definition for a binary tree node.
@@ -85,6 +89,4 @@ Want to know how many times I have used a `times` loop to solve an actual progra
 
 ## Conclusion
 
-Currently, there are only 5 submissions out of 999+ for a Ruby-based solution to the above problem, which I find hilarious. This experience has opened my eyes into how a language can hinder you if you don't examine the assumptions that are made in the inner workings of its de facto iterative loop. The beauty of C's `for` loop is it's so low-level there are no assumptions based into it.
-
-Unfortunately, now when I work in Ruby on actual comp-sci topics I have the mental weight of deciding between two different loops instead of having a single de facto one in my toolkit.
+Currently, there are only 5 submissions out of 999+ for a Ruby-based solution to the above problem, which I find hilarious. This experience has opened my eyes into how a language can hinder you if you don't examine the assumptions that are made in the inner workings of its "de facto" iterative loop. The beauty of the `for` loop is there is no additional abstraction wrapping around it, which the `each` loop is essentially doing for convenience's sake.
