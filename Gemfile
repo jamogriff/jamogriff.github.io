@@ -17,4 +17,6 @@ group :development, :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
+  gem "rack-jekyll" # serves Jekyll through Rack interface
+  gem "launchy"
 end

@@ -4,6 +4,7 @@ require 'capybara/rspec'
 require 'rack/jekyll'
 require 'rack/test'
 require 'launchy'
+require 'yaml'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

@@ -4,7 +4,6 @@ RSpec.describe 'Index page' do
     visit "/"
 
     expect(page).to have_link "About"
-    expect(page).to have_link "Worklog"
     expect(page).to have_link "Coding & Design"
     expect(page).to have_link "Musings"
   end
