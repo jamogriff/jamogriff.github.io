@@ -17,8 +17,6 @@ about:
 # included in the masthead's navbar
 masthead_pages:
   - about.html
-  - musings.md
-  - programming.md
 
 # Replace with your own ID
 # if you want Google Analytics

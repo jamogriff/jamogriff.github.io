@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Tourists in France"
-category: musings
 ---
 
 ![Tourists Crowding the Mona Lisa]({{ base.url }}/assets/images/travel/tourists.jpg "Tourists Crowding the Mona Lisa")

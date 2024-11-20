@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "History of Music Taste (abridged)"
-category: musings
 ---
 
 <h3 style='font-family: "Abril Fatface", serif;'>When it comes to music, I've been pretty "on the spectrum"...</h3>

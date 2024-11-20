@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Ruby's Each Loop Eventually Ends in Heartbreak"
-category: programming
 ---
 
 ## The Gold Standard
