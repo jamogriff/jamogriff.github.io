@@ -8,3 +8,5 @@
 # Dev files
 /tmp
 /branding
+
+.jekyll-cache
