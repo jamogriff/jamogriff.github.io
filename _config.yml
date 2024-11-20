@@ -1,13 +1,13 @@
 title: Jamogriff
 tagline: For that spark of imagination. 
 description: >- # this means to ignore newlines until "baseurl:"
-  For that spark of imagination.
-
+ My name is Jamison Griffith. I am a web developer, multi-instrumentalist
+ and dog dad residing in Colorado. 
 theme: jekyll-theme-gruv-poole
 
 about:
   image:
-    src: assets/images/jamo.jpg
+    src: assets/banner-assets/logo-optimized.svg 
     alt: Image of Jamogriff
   socials:
     - { id: github, url: https://github.com/jamogriff }
