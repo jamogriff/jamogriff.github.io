@@ -40,7 +40,7 @@ Queues are used alongside the [Breadth-first search (BFS)](https://en.wikipedia.
 
 The problem I was trying to solve was a straightforward one: [return the average value of the nodes on each level](https://leetcode.com/problems/average-of-levels-in-binary-tree/). I studied this problem for many hours, watched videos on BFS and examined other user's solutions. Once I had wrapped my head around how the algorithm worked I then set out to build my own, but reaching for an each loop to solve this led to confusing results that I couldn't make out for a long, frustrating time. Note in my solution below how the `times` loop was used instead of `each`.
 
-{% highlight ruby %}
+```ruby
 # Definition for a binary tree node.
 # class TreeNode
 #     attr_accessor :val, :left, :right
@@ -80,7 +80,7 @@ def average_of_levels(root)
   end
   avg_per_level
 end
-{% endhighlight %}
+```
 
 Want to know how many times I have used a `times` loop to solve an actual programming problem in Ruby? Zero. The Turing School of Software and Design teach the `each` loop as if it is a perfect stand-in for a `for` loop, and while that may be true for 99% of programming problems, there would have been no way for me to solve the above problem using an `each` loop using my approach. 
 
