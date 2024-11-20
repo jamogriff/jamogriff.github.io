@@ -1,8 +1,6 @@
 ---
-layout: category
+layout: page
 title: Coding & Design
-category: programming
-permalink: /programming
 ---
 
 ![Steve and Bill]({{ base.url }}/assets/images/misc/steveandbill.jpg "Steve Jobs and Bill Gates in their early days")

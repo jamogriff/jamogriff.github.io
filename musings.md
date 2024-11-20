@@ -1,8 +1,6 @@
 ---
-layout: category
+layout: page
 title: Musings
-category: musings
-permalink: /musings
 ---
 
 ![Grand Tetons in the Mirror]({{ base.url }}/assets/images/travel/teton-mirror.jpg "Grand Tetons in the mirror")
