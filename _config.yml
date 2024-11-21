@@ -50,7 +50,6 @@ exclude:
   - LICENSE.md
   - README.md
   - spec/
-  - misc-assets/
 
 liquid:
   error_mode: strict
