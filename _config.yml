@@ -32,6 +32,9 @@ masthead_pages:
 # an SEO plugin, then uncomment
 # disable_simple_seo: true
 
+plugins:
+  - rite_of_cleansing
+
 ### Developer-oriented config
 permalink: pretty
 
@@ -42,12 +45,10 @@ exclude:
   - .ruby-version
   - .gitignore
   - .travis.yml
-  - CNAME
   - rakefile.rb
   - .jekyll-cache
   - Gemfile
   - Gemfile.lock
-  - LICENSE.md
   - README.md
   - spec/
 

@@ -12,6 +12,8 @@ end
 
 group :development, :test do
   gem "rake"
+  gem "pry"
+  gem "htmlbeautifier", "~> 1.4"
   gem "html-proofer"
   gem "rspec"
   gem "capybara"
