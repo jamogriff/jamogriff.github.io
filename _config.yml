@@ -33,7 +33,7 @@ masthead_pages:
 # disable_simple_seo: true
 
 plugins:
-  - rite_of_cleansing
+  - jekyll-cleansing-rite
 
 ### Developer-oriented config
 permalink: pretty
