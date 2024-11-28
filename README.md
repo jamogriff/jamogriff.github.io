@@ -1,7 +1,6 @@
-# Personal Website Project
+# Personal Website
 
-This project utilized Jekyll to generate a static site to use for my own purposes. This served as a great introduction to trying out a couple new technologies, specifically:
-- Hosting a page using GitHub Pages
-- Utilizing Jekyll for site generation
+This is site is built with [Jekyll](http://jekyllrb.com) and features an [open source theme](https://github.com/jamogriff/gruv-poole) and [plugin](https://github.com/jamogriff/jekyll-cleansing-rite) that I developed.
 
-### I'll return to document further on this project and my thoughts on Jekyll in general-- in short, it's awesome.
+This was originally created in 2020, sat dormant for three years and then revived and overhauled in 2024. I've wanted to build a proper personal website since 2009, and have attempted and fizzled out more than half a dozen times. Let this stand as a humble monument to the virtue of persistence.
+
