@@ -1,14 +1,16 @@
-title: Jamogriff
-tagline: For that spark of imagination. 
-description: >- # this means to ignore newlines until "baseurl:"
- My name is Jamison Griffith. I am a web developer, multi-instrumentalist
- and dog dad residing in Colorado. 
+title: jamogriff.dev
+tagline: Developer + Guitarist + Handyman
+description: >-
+ Jamison Griffith is a full-stack developer, guitarist
+ and handyman residing in Arvada Colorado. He has a background in
+ biology and can churn out a lot of code using just a Terminal, git
+ and Docker.
 theme: jekyll-theme-gruv-poole
 
 about:
   image:
     src: assets/images/profesh.png 
-    alt: Image of Jamogriff
+    alt: Picture of Jamison Griffith looking towards the sky
   socials:
     - { id: github, url: https://github.com/jamogriff }
     - { id: youtube, url: https://www.youtube.com/@jamisongriffith6308 }

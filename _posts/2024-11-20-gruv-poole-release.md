@@ -6,7 +6,7 @@ description: Jamison Griffith has release a new open source theme entitled Gruv 
 
 ## Howdy!
 
-It's been a minute since I've updated this site. No better time to revive it from the grave than alongside the release of [Gruv Poole](https://github.com/jamogriff/gruv-poole), my open source theme. Gruv Poole is a modern, WCAG-compliant fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](http://jekyllrb.com), the static site generator.
+It's been a minute since I've updated this site. No better time to revive it from the grave than alongside the release of [Gruv Poole](https://github.com/jamogriff/gruv-poole), my open source theme. Gruv Poole is a modern, WCAG-compliant fork of the [Poole theme](https://github.com/poole/poole) for [Jekyll](https://jekyllrb.com), the static site generator.
 
 The Gruv Poole theme powers the aesthetic of the site, and the beauty of it being open source allows you to use and configure it to your own liking. The easiest way to implement it on a Jekyll site is by adding the Gem to your Gemfile: `gem "jekyll-theme-gruv-poole"`.
 
@@ -57,7 +57,7 @@ Gruv Poole's code is 100% open source. Even the icons and typefaces are licensed
 
 ## Accessible and Privacy-conscious
 
-Gruv Poole complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag). In addition, sites that use this theme can easily pop-in their Google Analytics ID if they want that functionality. Gruv Poole will dynamically render [ an appropriate privacy policy ]({{ privacy-policy.md | relative_url }}) based on that configuration.
+Gruv Poole complies with the [WCAG 2.2 AA accessibility standard](https://www.wcag.com/resource/what-is-wcag). In addition, sites that use this theme can easily pop-in their Google Analytics ID if they want that functionality. Gruv Poole will dynamically render [an appropriate privacy policy]({% link privacy-policy.md %}) based on that configuration.
 
 ## What are You Waiting For?
 
