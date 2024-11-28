@@ -1,0 +1,73 @@
+@use 'variables';
+@use 'mixins' as *;
+
+.row-md-1-1-1 {
+    display: grid;
+    gap: 1em;
+
+    @media (min-width: variables.$breakpoint-md) {
+        @include grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-style: solid;
+    border-width: medium;
+    text-align: center;
+
+    h2 {
+        margin-top: 0;
+        padding-bottom: 1rem;
+    }
+
+    .card-body {
+        padding-right: 1em;
+        padding-left: 1em;
+
+        &.tech {
+            p {
+                font-weight: 600;
+                margin-bottom: .4rem;
+            }
+        }
+    }
+
+    .artist {
+        color: var(--contrast-wcag);
+    }
+}
+
+.masonry-item {
+    img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: variables.$breakpoint-md) {
+    .no-gap-sm {
+        gap: 0;
+    }
+}
+
+@mixin generateCardBorderClasses($color) {
+  .#{$color}-border {
+    border-image: linear-gradient(var(--#{$color}-dark), var(--#{$color}-light)) 45;
+    h2 {
+        border-bottom: var(--#{$color}-dark) solid medium;
+    }
+  }
+}
+
+@include generateCardBorderClasses('aqua');
+@include generateCardBorderClasses('purple');
+@include generateCardBorderClasses('orange');
+@include generateCardBorderClasses('blue');
+@include generateCardBorderClasses('yellow');
+@include generateCardBorderClasses('green');
+@include generateCardBorderClasses('red');

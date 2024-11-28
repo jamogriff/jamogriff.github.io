@@ -7,7 +7,7 @@ theme: jekyll-theme-gruv-poole
 
 about:
   image:
-    src: assets/images/jamo.jpg 
+    src: assets/images/profesh.png 
     alt: Image of Jamogriff
   socials:
     - { id: github, url: https://github.com/jamogriff }
@@ -16,6 +16,7 @@ about:
 # Add any pages that you want to be
 # included in the masthead's navbar
 masthead_pages:
+  - songlist.html
   - about.html
 
 # Replace with your own ID
@@ -34,6 +35,10 @@ masthead_pages:
 
 plugins:
   - jekyll-cleansing-rite
+
+collections:
+  songs:
+    sort_by: skill
 
 ### Developer-oriented config
 permalink: pretty

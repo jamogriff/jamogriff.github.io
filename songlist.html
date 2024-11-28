@@ -1,0 +1,37 @@
+---
+layout: page
+title: Songlist
+---
+
+<p class="lead">
+  This list has existed in many different forms throughout my {{ site.time | time_since: 2011 }} years of playing guitar. 
+  I am very much a musical wanderer by nature, so crystallizing this list in a public forum is a necessity for me to stick to my music goals.
+</p>
+
+<hr>
+
+{% assign songsBySkill = site.songs | group_by_exp: "song", "song.skill" %}
+
+<div class="grid">
+    {% for skill in songsBySkill %}
+      {% if forloop.index == 1 or forloop.index == 4 %}
+        <div class="row-md-1-1-1 pb-4">
+      {% endif %}
+
+      <div class="card {{ skill.name | play_skill_color }}">
+        <h2>{{ skill.name | play_skill }}</h2>
+        <div class="card-body">
+          {% for song in skill.items %}
+            <div>
+              <h3>{{ song.name }}</h3>
+              <h5 class="artist">{{ song.artist }}</h5>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if forloop.index == 3 %}
+        </div>
+      {% endif %}
+    {% endfor %}
+</div>
