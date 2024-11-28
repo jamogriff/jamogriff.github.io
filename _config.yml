@@ -58,6 +58,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - spec/
+  - local_assets/
 
 liquid:
   error_mode: strict

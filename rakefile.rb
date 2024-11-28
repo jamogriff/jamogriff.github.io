@@ -24,3 +24,7 @@ task :test_html do
   HTMLProofer.check_directory('./_site', options).run
   puts "HtmlProofer test suite run complete"
 end
+
+task :build_prod do
+  sh 'JEKYLL_ENV=production bundle exec jekyll build'
+end
