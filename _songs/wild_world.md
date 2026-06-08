@@ -1,5 +1,5 @@
 ---
 name: Wild World
 artist: Cat Stevens
-skill: 2
+skill: 0
 ---

@@ -1,13 +1,11 @@
 @use 'variables';
 @use 'mixins' as *;
 
-.row-md-1-1-1 {
-    display: grid;
-    gap: 1em;
+.row-md-1-1 {
+    gap: 2.5rem;
 
-    @media (min-width: variables.$breakpoint-md) {
-        @include grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    &.songlist-row {
+        padding-bottom: 2.5rem;
     }
 }
 

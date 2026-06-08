@@ -1,5 +1,5 @@
 ---
 name: Drive
 artist: Incubus
-skill: 2
+skill: 0
 ---

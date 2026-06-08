@@ -1,5 +1,5 @@
 ---
 name: Layla
 artist: Eric Clapton
-skill: 4
+skill: 3
 ---

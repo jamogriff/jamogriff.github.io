@@ -1,5 +1,5 @@
 ---
 name: Creep
 artist: Radiohead
-skill: 3
+skill: 0
 ---

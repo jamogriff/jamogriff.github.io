@@ -2,18 +2,14 @@ module Jekyll
   module PlaySkillFilter
     def play_skill(rating)
       case rating
+      when 0
+        "Graveyard"
       when 1
-        "Wishlist"
+        "Out of Rotation"
       when 2
-        "Bits & Pieces"
+        "Currently Playing"
       when 3
-        "Recognizable"
-      when 4
-        "Proficent"
-      when 5
-        "Mastery"
-      when 6
-        "Play & Sing"
+        "Ingrained"
       else
         "Unknown"
       end
@@ -21,17 +17,13 @@ module Jekyll
 
     def play_skill_color(rating)
       case rating
+      when 0
+        "red-border"
       when 1
         "orange-border"
       when 2
-        "yellow-border"
-      when 3
-        "green-border"
-      when 4
         "aqua-border"
-      when 5
-        "blue-border"
-      when 6
+      when 3
         "purple-border"
       else
         "red-border"

@@ -1,5 +1,5 @@
 ---
 name: Stormy Monday
 artist: T-Bone Walker
-skill: 4
+skill: 3
 ---
