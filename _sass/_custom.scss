@@ -9,6 +9,16 @@
     }
 }
 
+.row-md-1-1-1 {
+    display: grid;
+    gap: 1em;
+
+    @media (min-width: variables.$breakpoint-md) {
+        @include grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 .card {
     padding-top: 1em;
     padding-bottom: 1em;
